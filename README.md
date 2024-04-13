@@ -17,10 +17,9 @@ frontend:
 ### First Feature
 
  - Input: 
-	 - weights,
-	 - total acquired points / total possible points or %, based on needs, for each weighted section, 
-	 - value of important test /  assignment, 
-	 - grade you want,
+	 - current grade,
+    	 - intended grade,
+	 - final exam weight,
  - Output:
 	 - score necessary to get intended grade
 
