@@ -9,19 +9,17 @@ backend:
 frontend:
 	undecided
 
+## Current Features
+
+ - calculate score needed on final exam based on:
+	- current grade,
+   	- intended grade,
+   	- final exam weight,
+
 ## Intended Features
 
  - support for weights (i.e. exams are 80%, assignments 20%)
  - how will a grade drop/increase affect GPA
-
-### First Feature
-
- - Input: 
-	 - current grade,
-    	 - intended grade,
-	 - final exam weight,
- - Output:
-	 - score necessary to get intended grade
 
 ### Possible Future Features:
 
