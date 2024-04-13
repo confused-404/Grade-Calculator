@@ -1,12 +1,14 @@
-use axum::{routing::get, Router};
+use axum::{routing::{get, post}, Router};
 
-mod gpa_effect;
-mod score_calcs;
+use crate::handlers::calculate_grade;
+
+mod handlers;
+mod models;
 
 #[tokio::main]
 async fn main() {
     let app: Router = Router::new()
-        .route("/gpa-effect/:cGPA/:numclasses/:newgrade", get(gpa_effect::get_new_gpa));
+        .route("/calculate", post(calculate_grade)); // TODO: change this
 
     println!("Running on http://localhost:3000");
 
