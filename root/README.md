@@ -3,6 +3,12 @@
 The aim of this project is to help me figure out how well I need to do on test(s)/assignment(s) to get the grade I want. 
 Learning project to get better at web development, build a REST API backend with Rust (though unnecessary, but interesting) to perform calculations (all very simple)
 
+backend: 
+	REST API made with Rust and Axum framework
+
+frontend:
+	undecided
+
 ## Intended Features
 
  - support for weights (i.e. exams are 80%, assignments 20%)
