@@ -1,0 +1,9 @@
+C:\Users\eleph\Desktop\ProgrammingProjects\Personal\Web\Grade-Calculator\root\backend\grade_calculator\target\debug\deps\libfutures_channel-4c4a20e4379259ae.rmeta: C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\lib.rs C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\lock.rs C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\mpsc\mod.rs C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\mpsc\queue.rs C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\oneshot.rs
+
+C:\Users\eleph\Desktop\ProgrammingProjects\Personal\Web\Grade-Calculator\root\backend\grade_calculator\target\debug\deps\futures_channel-4c4a20e4379259ae.d: C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\lib.rs C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\lock.rs C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\mpsc\mod.rs C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\mpsc\queue.rs C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\oneshot.rs
+
+C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\lib.rs:
+C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\lock.rs:
+C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\mpsc\mod.rs:
+C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\mpsc\queue.rs:
+C:\Users\eleph\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.30\src\oneshot.rs:

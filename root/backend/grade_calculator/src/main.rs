@@ -1,3 +1,5 @@
 fn main() {
-    println!("Hello, world!");
+    let s: String = String::from("test string");
+
+    println!("{}", s);
 }
