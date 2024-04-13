@@ -1,6 +1,13 @@
 # Grade Calculator
 
 The aim of this project is to help me figure out how well I need to do on test(s)/assignment(s) to get the grade I want. 
+Learning project to get better at web development, build a REST API backend with Rust (though unnecessary, but interesting) to perform calculations (all very simple)
+
+backend: 
+	REST API made with Rust and Axum framework
+
+frontend:
+	undecided
 
 ## Intended Features
 
@@ -8,6 +15,7 @@ The aim of this project is to help me figure out how well I need to do on test(s
  - how will a grade drop/increase affect GPA
 
 ### First Feature
+
  - Input: 
 	 - weights,
 	 - total acquired points / total possible points or %, based on needs, for each weighted section, 
@@ -15,3 +23,9 @@ The aim of this project is to help me figure out how well I need to do on test(s
 	 - grade you want,
  - Output:
 	 - score necessary to get intended grade
+
+### Possible Future Features:
+
+ - create a sign in system and save grade information to gain experience of adding a DB to this stack
+ - support for weighted GPAs
+ - support for foreign grading systems
