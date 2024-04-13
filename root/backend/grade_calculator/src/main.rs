@@ -1,8 +1,12 @@
 use axum::{routing::get, Router};
 
+mod gpa_effect;
+mod score_calcs;
+
 #[tokio::main]
 async fn main() {
-    let app: Router = Router::new().route("/", get(|| async { "testing ?? !! ??" }));
+    let app: Router = Router::new()
+        .route("/gpa-effect/:cGPA/:numclasses/:newgrade", get(gpa_effect::get_new_gpa));
 
     println!("Running on http://localhost:3000");
 
