@@ -1,5 +1,12 @@
-fn main() {
-    let s: String = String::from("test string");
+use axum::{routing::get, Router};
 
-    println!("{}", s);
+#[tokio::main]
+async fn main() {
+    let app = Router::new().route("/", get(|| async { "testing ?? !! ??" }));
+
+    println!("Running on http://localhost:3000");
+    axum::Server::bind(&"0.0.0.0:3000".parse().unwrap())
+        .serve(app.into_make_service())
+        .await
+        .unwrap();
 }
