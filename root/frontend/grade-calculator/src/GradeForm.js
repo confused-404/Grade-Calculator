@@ -5,14 +5,33 @@ function GradeForm({ onSubmit }) {
   const [currentGrade, setCurrentGrade] = useState('');
   const [intendedGrade, setIntendedGrade] = useState('');
   const [finalExamWeight, setFinalExamWeight] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit({
-      currentGrade: parseFloat(currentGrade),
-      intendedGrade: parseFloat(intendedGrade),
-      finalExamWeight: parseFloat(finalExamWeight)
-    });
+    setIsLoading(true);
+    try {
+      const formData = {
+        current_grade: parseFloat(currentGrade),
+        grade_goal: parseFloat(intendedGrade),
+        final_weight: parseFloat(finalExamWeight)
+      };
+      // Call your REST API to calculate the grade
+      const result = await fetch('http://localhost:8080/calculate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await result.json();
+      // Pass the result to the parent component
+      onSubmit(data.finalGrade);
+    } catch (error) {
+      console.error('Error calculating grade:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -20,7 +39,7 @@ function GradeForm({ onSubmit }) {
       <h2>Grade Calculator</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="currentGrade">Current Grade:</label>
+          <label htmlFor="currentGrade">Current Grade (%):</label>
           <input 
             type="number" 
             id="currentGrade" 
@@ -30,7 +49,7 @@ function GradeForm({ onSubmit }) {
           />
         </div>
         <div>
-          <label htmlFor="intendedGrade">Intended Grade:</label>
+          <label htmlFor="intendedGrade">Intended Grade (%):</label>
           <input 
             type="number" 
             id="intendedGrade" 
@@ -49,7 +68,9 @@ function GradeForm({ onSubmit }) {
             required 
           />
         </div>
-        <button type="submit">Calculate</button>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? 'Calculating...' : 'Calculate'}
+        </button>
       </form>
     </div>
   );
