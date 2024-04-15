@@ -16,7 +16,6 @@ function GPAForm({ onSubmit }) {
         classes_taken: parseInt(numberOfClasses),
         upcoming_grade: parseFloat(upcomingGrade)
       };
-      // Call your REST API to calculate the new GPA
       const result = await fetch('http://localhost:8080/calculate-gpa', {
         method: 'POST',
         headers: {
@@ -25,7 +24,6 @@ function GPAForm({ onSubmit }) {
         body: JSON.stringify(formData),
       });
       const data = await result.json();
-      // Pass the result to the parent component
       onSubmit(data.newGPA);
     } catch (error) {
       console.error('Error calculating new GPA:', error);

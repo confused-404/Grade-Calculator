@@ -16,7 +16,6 @@ function ScoreForm({ onSubmit }) {
         grade_goal: parseFloat(intendedGrade),
         final_weight: parseFloat(finalExamWeight)
       };
-      // Call your REST API to calculate the grade
       const result = await fetch('http://localhost:8080/calculate', {
         method: 'POST',
         headers: {
@@ -25,7 +24,6 @@ function ScoreForm({ onSubmit }) {
         body: JSON.stringify(formData),
       });
       const data = await result.json();
-      // Pass the result to the parent component
       onSubmit(data.finalGrade);
     } catch (error) {
       console.error('Error calculating grade:', error);
