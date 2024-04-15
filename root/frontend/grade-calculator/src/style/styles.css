@@ -1,51 +1,56 @@
 body {
-    background-color: #333; /* Dark background color for the entire page */
-    color: #fff; /* Light text color for the entire page */
-  }
-  
-  .form-container {
-    max-width: 400px;
-    margin: 20px auto; /* Add margin to center the container and create space around it */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #444; /* Darker background color for the form container */
-  }
-  
-  .form-container h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    font-size: 24px;
-  }
-  
-  .form-container label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .form-container input[type="number"] {
-    width: calc(100% - 22px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #555; /* Darker background color for input fields */
-    color: #fff;
-  }
-  
-  .form-container button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .form-container button:hover {
-    background-color: #0056b3;
-  }
-  
+  background-image: url('/resources/space_bg.jpeg');
+  background-size: cover; /* Cover the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: repeat; /* Do not repeat the image */
+  color: #fff;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  /* Add margin to center the container and create space around it */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #444;
+  /* Darker background color for the form container */
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-container input[type="number"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #555;
+  /* Darker background color for input fields */
+  color: #fff;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}

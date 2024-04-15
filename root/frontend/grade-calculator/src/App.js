@@ -1,5 +1,6 @@
 import React from 'react';
-import GradeForm from './GradeForm';
+import ScoreForm from './ScoreForm';
+import GPAForm from './GPAForm';
 
 function App() {
   const handleSubmit = (formData) => {
@@ -7,9 +8,13 @@ function App() {
   };
 
   return (
-    <div className="App">
-      
-      <GradeForm onSubmit={handleSubmit} />
+    <div className="app-container">
+      <div className="form-wrapper">
+        <ScoreForm onSubmit={handleSubmit} />
+      </div>
+      <div className="form-wrapper">
+        <GPAForm onSubmit={handleSubmit} />
+      </div>
     </div>
   );
 }
