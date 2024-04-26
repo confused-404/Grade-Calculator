@@ -1,5 +1,4 @@
 use axum::{
-    http::self,
     routing::post,
     Router,
 };
