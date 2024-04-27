@@ -15,11 +15,13 @@ frontend:
 	- current grade,
    	- intended grade,
    	- final exam weight,
+- backend now hosted using fly.io
 
 ## Intended Features
 
  - support for weights (i.e. exams are 80%, assignments 20%)
  - how will a grade drop/increase affect GPA
+ - security (some sort of authorization)
 
 ### Possible Future Features:
 
