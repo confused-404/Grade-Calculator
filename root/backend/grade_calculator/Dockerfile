@@ -1,5 +1,17 @@
-FROM 1.77.2-buster
+FROM rust:bookworm as builder
 
-COPY ./target/release/grade_calculator /opt/grade_calculator
+WORKDIR /usr/src/app
 
-RUN /opt/grade_calculator
+COPY . .
+
+RUN cargo build --release
+
+FROM debian:bookworm
+
+WORKDIR /app
+
+COPY --from=builder /usr/src/app/target/release/grade_calculator .
+
+EXPOSE 8080
+
+CMD ["./grade_calculator"]
