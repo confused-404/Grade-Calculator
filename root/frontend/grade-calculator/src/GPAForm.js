@@ -16,7 +16,7 @@ function GPAForm({ onSubmit }) {
         classes_taken: parseInt(numberOfClasses),
         upcoming_grade: parseFloat(upcomingGrade)
       };
-      const result = await fetch('http://localhost:8080/calculate-gpa', {
+      const result = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

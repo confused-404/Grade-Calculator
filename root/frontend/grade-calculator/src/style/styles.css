@@ -51,3 +51,9 @@ body {
 .form-container button:hover {
   background-color: #0056b3;
 }
+
+
+
+.modal {
+  padding: 10px;
+}

@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import './style/styles.css'; // Import the CSS file
+import './style/styles.css'; 
+import Modal from './Modal.js';
 
 function ScoreForm({ onSubmit }) {
   const [currentGrade, setCurrentGrade] = useState('');
   const [intendedGrade, setIntendedGrade] = useState('');
   const [finalExamWeight, setFinalExamWeight] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [resultGrade, setResultGrade] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +27,8 @@ function ScoreForm({ onSubmit }) {
         body: JSON.stringify(formData),
       });
       const data = await result.json();
-      onSubmit(data.finalGrade);
+      setResultGrade(data.required_score);
+      setShowModal(true);
     } catch (error) {
       console.error('Error calculating grade:', error);
     } finally {
@@ -70,6 +74,7 @@ function ScoreForm({ onSubmit }) {
           {isLoading ? 'Calculating...' : 'Calculate'}
         </button>
       </form>
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)} grade={resultGrade} />
     </div>
   );
 }
