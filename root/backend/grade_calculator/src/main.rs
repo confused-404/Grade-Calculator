@@ -1,6 +1,8 @@
 use axum::{
-    response::Html, routing::{get, post}, Router
+    http::{HeaderValue, Method}, response::Html, routing::{get, post}, Router
 };
+
+use tower_http::cors::{Any, CorsLayer};
 
 use crate::handlers::calculate_grade;
 
@@ -9,9 +11,15 @@ mod models;
 
 #[tokio::main]
 async fn main() {
+    let cors: CorsLayer = CorsLayer::new()
+        .allow_methods([Method::POST, Method::GET])
+        .allow_origin(Any)
+        .allow_headers(Any);
+
     let app: Router = Router::new()
         .route("/calculate", post(calculate_grade))
-        .route("/", get(test_main));
+        .route("/", get(test_main))
+        .layer(cors);
 
     println!("Running on http://localhost:8080");
 
