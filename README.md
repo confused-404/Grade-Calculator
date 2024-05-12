@@ -7,7 +7,7 @@ backend:
 	REST API made with Rust and Axum framework
 
 frontend:
-	undecided
+	React JS
 
 ## Current Features
 
