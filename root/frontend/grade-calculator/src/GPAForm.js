@@ -16,7 +16,7 @@ function GPAForm({ onSubmit }) {
         classes_taken: parseInt(numberOfClasses),
         upcoming_grade: parseFloat(upcomingGrade)
       };
-      const result = await fetch('', {
+      const result = await fetch("secret-grade-calculator-calcs.fly.dev", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

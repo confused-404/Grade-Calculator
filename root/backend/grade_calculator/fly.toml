@@ -1,10 +1,15 @@
-# fly.toml app configuration file generated for grade-calculator on 2024-04-26T17:27:40-06:00
+# fly.toml app configuration file generated for secret-grade-calculator-calcs on 2024-05-17T20:10:33-06:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'grade-calculator'
+app = 'secret-grade-calculator-calcs'
 primary_region = 'ord'
+
+[experimental]
+  cmd = ['./grade_calculator']
+
+[build]
 
 [http_service]
   internal_port = 8080
@@ -18,6 +23,3 @@ primary_region = 'ord'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
-
-[experimental]
-cmd = "./grade_calculator"
