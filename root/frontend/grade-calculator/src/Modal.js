@@ -9,7 +9,7 @@ function Modal({ isOpen, onClose, grade}) {
             <div className="modal-content">
                 <span className="close" onClick={onClose}>&times;</span>
                 <h2>Result Grade</h2>
-                <p>Final Grade: {grade}</p>
+                <p>Final Grade: {+grade.toFixed(2)}</p>
             </div>
         </div>
     )
