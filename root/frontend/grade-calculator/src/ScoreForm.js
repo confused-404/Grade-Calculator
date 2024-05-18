@@ -19,7 +19,7 @@ function ScoreForm({ onSubmit }) {
         grade_goal: parseFloat(intendedGrade),
         final_weight: parseFloat(finalExamWeight)
       };
-      const result = await fetch('http://localhost:8080/calculate', {
+      const result = await fetch('https://secret-grade-calculator-calcs.fly.dev/calculate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
